@@ -1,0 +1,80 @@
+﻿@model MvcApplication1.Areas.ContactDetails.Models.ContactDetails
+
+@using (Html.BeginForm("Index", "Management"))
+{
+    <fieldset>
+        <legend>Contact Details:</legend>
+        <div>
+            @Html.LabelFor(m => m.FirstName)
+            @Html.TextBoxFor(m => m.FirstName)
+        </div>
+
+        <div>
+            @Html.LabelFor(m => m.LastName)
+            @Html.TextBoxFor(m => m.LastName)
+        </div>
+
+        <div>
+            @Html.LabelFor(m => m.Email)
+            @Html.TextBoxFor(m => m.Email)
+        </div>
+
+        <div>
+            @Html.LabelFor(m => m.HomePhone)
+            <table>
+                <tr>
+                    <td>@Html.TextBoxFor(m => m.HomePhone.CountryCode)</td>
+                    <td>@Html.TextBoxFor(m => m.HomePhone.AreaCode)</td>
+                    <td>@Html.TextBoxFor(m => m.HomePhone.PhoneNumber)</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div>
+            @Html.LabelFor(m => m.CellPhone)
+            <table>
+                <tr>
+                    <td>@Html.TextBoxFor(m => m.CellPhone.CountryCode)</td>
+                    <td>@Html.TextBoxFor(m => m.CellPhone.AreaCode)</td>
+                    <td>@Html.TextBoxFor(m => m.CellPhone.PhoneNumber)</td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            @Html.LabelFor(m => m.HomeAddress.Line1)
+            @Html.TextBoxFor(m => m.HomeAddress.Line1)
+        </div>
+
+        <div>
+            @Html.LabelFor(m => m.HomeAddress.Line2)
+            @Html.TextBoxFor(m => m.HomeAddress.Line2)
+        </div>
+
+        <div>
+            @Html.LabelFor(m => m.HomeAddress.Line3)
+            @Html.TextBoxFor(m => m.HomeAddress.Line3)
+        </div>
+
+        <div>
+            @Html.LabelFor(m => m.HomeAddress.City)
+            @Html.TextBoxFor(m => m.HomeAddress.City)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.HomeAddress.Province)
+            @Html.TextBoxFor(m => m.HomeAddress.Province)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.HomeAddress.Country)
+            @Html.TextBoxFor(m => m.HomeAddress.Country)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.HomeAddress.PostalCode)
+            @Html.TextBoxFor(m => m.HomeAddress.PostalCode)
+        </div>
+
+        <input type="submit" value="Create" />
+    </fieldset>
+    
+}
